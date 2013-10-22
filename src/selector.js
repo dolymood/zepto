@@ -1,3 +1,7 @@
+//     Zepto.js
+//     (c) 2010-2013 Thomas Fuchs
+//     Zepto.js may be freely distributed under the MIT license.
+
 ;(function($){
   var zepto = $.zepto, oldQsa = zepto.qsa, oldMatches = zepto.matches
 
@@ -39,7 +43,7 @@
     sel = sel.replace(/=#\]/g, '="#"]')
     var filter, arg, match = filterRe.exec(sel)
     if (match && match[2] in filters) {
-      var filter = filters[match[2]], arg = match[3]
+      filter = filters[match[2]], arg = match[3]
       sel = match[1]
       if (arg) {
         var num = Number(arg)

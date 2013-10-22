@@ -7,8 +7,9 @@
   <title>Zepto compatibility unit tests</title>
   <script src="../vendor/evidence.js"></script>
   <script src="evidence_runner.js"></script>
-  <script src="../src/polyfill.js"></script>
+  <script src="../src/ios3.js"></script>
   <script src="../src/zepto.js"></script>
+  <script src="../src/ie.js"></script>
 </head>
 <body>
   <h1>Compatibility tests</h1>
@@ -23,6 +24,7 @@
       // test to see if we augment String.prototype.trim if not supported natively
       testTrim: function(t){
         t.assertEqual("blah", " blah ".trim())
+        t.assertEqual("bl \n ah", " bl \n ah ".trim())
       },
 
       // test to see if we augment Array.prototype.reduceif not supported natively
